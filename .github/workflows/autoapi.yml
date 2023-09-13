@@ -40,7 +40,7 @@ jobs:
         CONFIG_KEY: ${{ secrets.CONFIG_KEY }} # secrets_key prepare
         REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }} # refresh_token prepare
       run: | 
-        cp main.py temp.py
+        cp helpers.py temp.py
         echo $CONFIG_ID > configid.txt
         echo $CONFIG_KEY > configkey.txt
         echo $REFRESH_TOKEN > refreshtoken.txt
