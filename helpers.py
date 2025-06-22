@@ -45,3 +45,9 @@ def call_api_delete(url, access_token, return_raw=True):
             return response
         else:
             return "{}: {} {}".format("Error", response.status_code, response.text)
+if __name__ == "__main__":
+    import os
+    token = os.getenv("ACCESS_TOKEN")
+    test_url = os.getenv("TEST_URL")
+    print(call_api_get(test_url, token, return_raw=False))
+
